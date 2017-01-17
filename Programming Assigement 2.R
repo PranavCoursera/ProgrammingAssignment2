@@ -3,7 +3,7 @@
 
 ## Objective of this function is to "save" the inverse of matricies already solved inorder to save processing time
 
-MakeCacheMatrix <- function(x = matrix()) {##took the Vector function of this and made some minor changes
+makeCacheMatrix <- function(x = matrix()) {##took the Vector function of this and made some minor changes
   a <- NULL
   set <- function(y) {
     x <<- y
@@ -17,7 +17,7 @@ MakeCacheMatrix <- function(x = matrix()) {##took the Vector function of this an
        getinverse = getinverse)
 }
 ## Objective of this function is to return the inverse of a matrix. First it sees if the matrix inverse has been already solved and if not solves it
-CacheSolve <- function(x, ...) {##once again took the vector function of this and made some minor changes
+cacheSolve <- function(x, ...) {##once again took the vector function of this and made some minor changes
   a <- x$getinverse()
   if(!is.null(a)) {
     return(a)
