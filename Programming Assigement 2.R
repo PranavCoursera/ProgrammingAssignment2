@@ -1,9 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This function is split into two major parts, MakeCacheMatrix and CacheSolve. CacheSolve solves the inverse of a matrix but first checks
+##to see if the inverse was already solved. MakeCacheMatrix saves the inverses of matrices already solved.
 
 ## Objective of this function is to "save" the inverse of matricies already solved inorder to save processing time
 
-makeCacheMatrix <- function(x = matrix()) {##took the Vector function of this and made some minor changes
+MakeCacheMatrix <- function(x = matrix()) {##took the Vector function of this and made some minor changes
   a <- NULL
   set <- function(y) {
     x <<- y
@@ -17,8 +17,7 @@ makeCacheMatrix <- function(x = matrix()) {##took the Vector function of this an
        getinverse = getinverse)
 }
 ## Objective of this function is to return the inverse of a matrix. First it sees if the matrix inverse has been already solved and if not solves it
-
-cacheSolve <- function(x, ...) {##once again took the vector function of this and made some minor changes
+CacheSolve <- function(x, ...) {##once again took the vector function of this and made some minor changes
   a <- x$getinverse()
   if(!is.null(a)) {
     return(a)
